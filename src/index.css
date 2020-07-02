@@ -1,0 +1,19 @@
+#venn {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  box-sizing: border-box;
+  padding: 30px;
+}
+g.venn-area-part {
+  cursor: pointer;
+}
+g.venn-area-part path {
+  fill: #ffffff;
+  stroke: #009fdf;
+  stroke-width: 3px;
+  stroke-opacity: 1;
+}
