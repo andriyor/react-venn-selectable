@@ -1,9 +1,9 @@
 import React from 'react';
 
 import * as d3 from 'd3';
-import * as venn from 'venn.js';
+import PropTypes from 'prop-types';
 
-import { propTypes } from "props/props";
+import * as venn from 'venn.js';
 import {GElement, IntersectionAreasMapping, VennSet} from "../types/venn.js";
 
 export interface VennProps {
@@ -18,7 +18,16 @@ export class Venn extends React.Component<VennProps> {
     sets: [],
   };
 
-  static propTypes = propTypes;
+  static propTypes = {
+    selectors: PropTypes.arrayOf(PropTypes.string),
+    sets: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string,
+        sets: PropTypes.arrayOf(PropTypes.string).isRequired,
+        size: PropTypes.number.isRequired,
+      })
+    ),
+  };
 
   getIntersectionAreasMapping() {
     let intersectionAreasMapping = {};
