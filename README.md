@@ -13,8 +13,13 @@ React venn.js wrapper
 See `example` folder
 
 ```javascript
+import * as React from 'react';
+
+import {Venn} from 'react-venn-selectable';
+import 'react-venn-selectable/src/index.css'
+
 const App = () => {
-  const sets3: VennSet[] = [
+  const sets3 = [
     {"sets": ["A"], "size": 12, "label": "A"},
     {"sets": ["B"], "size": 12, "label": "B"},
     {"sets": ["C"], "size": 12, "label": "C"},
@@ -24,7 +29,7 @@ const App = () => {
     {"sets": ["A", "B", "C"], "size": 2}
   ];
 
-  const sets2: VennSet[] = [
+  const sets2 = [
     {"sets": ["A"], "size": 12, "label": "A"},
     {"sets": ["B"], "size": 12, "label": "B"},
     {"sets": ['A', "B"], "size": 2},
